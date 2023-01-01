@@ -1,0 +1,71 @@
+/* 标题样式 */
+.pageTitle{
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    position: fixed;
+    z-index: 999;
+    line-height: 60px;
+    background-color: lightseagreen;
+    font-weight: 700;
+}
+.progress-box{
+    width: 500px;
+    height: 20px;
+    margin:100px auto;
+    text-align: center;
+    overflow: hidden;
+}
+.progress{
+    height: 100%;
+    border-radius: 10px;
+    background: linear-gradient(to right,deeppink,deeppink);
+    border: lightgray 1px solid; 
+    box-shadow: 0 0 15px gray;
+    background-repeat: no-repeat;
+    background-size: 0% 100%; 
+}
+.box{
+    position:absolute;
+    height: 710px;
+    transform: translateY(-100%);
+    opacity: 0;
+    overflow: hidden;
+}
+.startBox{
+    position: absolute;
+    top:60px;
+    left: calc(50% - 300px);
+    height: 500px;
+    width: 600px;
+    overflow: hidden;
+}
+.textBox{
+    line-height: 1.8;
+    color:white;
+    text-indent: 2rem;
+    animation: textMove 1s linear forwards paused;
+    opacity: 0;
+    overflow: hidden;
+}
+.btnStart{
+    position:absolute;
+    width: 170px;
+    height: 55px;
+    top:50%;
+    left: calc(50% - 85px);
+    font-size: 24px;
+    border: none;
+    color: white;
+    background: rgba(0 , 0, 0, .5);
+    cursor:pointer;
+    box-shadow: 0 0 15px lightgray;
+}
+@keyframes textMove{
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(-120%);
+    }
+}

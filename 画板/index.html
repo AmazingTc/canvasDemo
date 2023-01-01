@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(75, 205, 209);
+        }
+
+        #canvas {
+            border-radius: 25px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            background: white;
+        }
+
+        #color {
+            height: 50px;
+            width: 80px;
+            border-radius: 10px;
+            border: none;
+        }
+
+        .tools {
+            width: 800px;
+            height: 90px;
+            margin: 10px auto;
+        }
+
+        .tools button {
+            display: block;
+            float: left;
+            margin: 0 5px;
+            height: 50px;
+            width: 80px;
+            border-radius: 10px;
+            border: none;
+            box-shadow: 0 0 5px 1px rgb(86, 80, 80);
+            transition: all .5s;
+        }
+
+        button:hover {
+            cursor: pointer;
+            height: 60px;
+        }
+        [type="range"]{
+            display: block;
+            height: 20px;
+            width: 200px;
+            margin-top:10px;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas width="900" height="500" id="canvas"></canvas>
+    <div class="tools">
+        <button id="btnRed" style="background-color: red;color: white;">红色画笔</button>
+        <button id="btnBlue" style="background-color: blue;color: white;">蓝色画笔</button>
+        <button id="btnPink" style="background-color: pink;color: white;">粉色画笔</button>
+        <input type="color" id="color">
+        <button id="btnBlod" style="font-weight: bold;">粗</button>
+        <button id="btnSink">细</button>
+        <button id="btnclean">清空画板</button>
+        <button id="btnXiangpi">橡皮擦</button>
+        <button id="shape">圆</button>
+        <input id="range" type="range" max="50" min="1" step="1" value="10">
+    </div>
+    <script>
+        const div=document.querySelector('#test')
+    </script>
+    <script src="./pain.js"></script>
+    <script src="./shape.js"></script>
+    <script src="./index.js"></script>
+</body>
+
+</html>
